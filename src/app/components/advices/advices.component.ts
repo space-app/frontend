@@ -7,9 +7,10 @@ import { Router } from '@angular/router';
   styleUrls: ['./advices.component.css']
 })
 export class AdvicesComponent implements OnInit {
-  me = [ "Consume enough Vitamins", "rest", "Wash your hands"];
-  fluffy = ["Give him probiotics", "Keep him in house"];
-  plants = ["water plants", "cover them"];
+  me = [ "Eat fruits", "Rest for 1hr", "Wash your hands"];
+  // fluffy = ["Give him probiotics", "Keep him in house"];
+  fluffy = ["Don't forget to feed him", "Take a 20min walk"];
+  plants = ["Water your plants"];
   rating = ["neutral","neutral","neutral"];
   pet_rating = ["neutral","neutral"];
   plants_rating = ["neutral","neutral"];
@@ -41,7 +42,7 @@ change_plants_rating(rating, index){
   this.plants_rating[index] = rating;
 }
 feeling_bad(){
-  this.router.navigate(['user-input']);
+  this.router.navigate(['user']);
 }
 activate(user){
   this.active_user = user;

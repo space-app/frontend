@@ -13,8 +13,8 @@ const routes: Routes = [
   { path: 'prognosis', component: PrognosisComponent },
   { path: 'advices', component: AdvicesComponent },
   { path: 'user', component: UserInputComponent },
-  { path: '', redirectTo: 'prognosis', pathMatch: 'full' },
-  { path: '**', redirectTo: 'prognosis', pathMatch: 'full' },
+  { path: '', redirectTo: 'advices', pathMatch: 'full' },
+  { path: '**', redirectTo: 'advices', pathMatch: 'full' },
 
 ];
 @NgModule({

@@ -1,93 +1,95 @@
 <div class="bg">
 </div>
 <div class="body">
-<div class="row ">
+  <div class="row ">
     <div class="col text-center" [ngClass]="{'selected':active_user == 'me'}">
-        <a style="font-size: 3rem" (click)="activate('me')"><i class="fa fa-user fa-lg"></i></a>
-      </div>
-      <div class="col text-center" [ngClass]="{'selected':active_user == 'pet'}">
-        <a style="font-size: 3rem" (click)="activate('pet')"><i class="fa fa-paw fa-lg"></i></a>
-      </div>
-      <div class="col text-center" [ngClass]="{'selected':active_user == 'plants'}">
-        <a style="font-size: 3rem" (click)="activate('plants')"><i class="fa fa-leaf fa-lg"></i></a>
-      </div>
-</div>
-<div class="row">
+      <a style="font-size: 3rem" (click)="activate('me')"><i class="fa fa-user fa-lg"></i></a>
+    </div>
+    <div class="col text-center" [ngClass]="{'selected':active_user == 'pet'}">
+      <a style="font-size: 3rem" (click)="activate('pet')"><i class="fa fa-paw fa-lg"></i></a>
+    </div>
+    <div class="col text-center" [ngClass]="{'selected':active_user == 'plants'}">
+      <a style="font-size: 3rem" (click)="activate('plants')"><i class="fa fa-leaf fa-lg"></i></a>
+    </div>
+  </div>
+  <div class="row">
     <div class="col text-center">
-        <i style="color: red" class="fa fa-circle"></i>
+      <i style="color: orange" class="fa fa-circle"></i>
     </div>
     <div class="col text-center">
-        <i style="color: green" class="fa fa-circle"></i>
+      <i style="color: green" class="fa fa-circle"></i>
     </div>
     <div class="col text-center">
-        <i style="color: green" class="fa fa-circle"></i>
+      <i style="color: green" class="fa fa-circle"></i>
     </div>
-</div>
-<div *ngIf="overview != ''" class="card">
-  <div class="card-body text-center">
-    <h4>{{warning}}</h4>
+  </div>
+  <div *ngIf="overview != ''" class="card header">
+    <div class="card-body text-center">
+      <h4>{{warning}}</h4>
       <p>{{overview}}</p>
-  </div>
-</div>
-<div *ngIf="active_user == 'me'" class="card">
-  <div class="card-header">
-    <h4>Me</h4>
-  </div>
-  <div class="card-body"> 
-    <ul class="list-group list-group-flush">
-      <li *ngFor="let item of me; let i = index" class="list-group-item list-item">
-                    {{item}}
-        <a *ngIf="rating[i] == 'neutral'" (click)="change_rating('up', i)" class="fa fa-thumbs-up fa-lg"></a>
-        <a *ngIf="rating[i] == 'up'" style="color:green" (click)="change_rating('down', i)" class="fa fa-thumbs-up fa-lg"></a>
-        <a *ngIf="rating[i] == 'down'" style="color:red" (click)="change_rating('neutral', i)" class="fa fa-thumbs-down fa-lg"></a>
-      </li>
-    </ul>
-    <div class="text-center">
-      <button id="seemore" type="button" class="btn btn-link">See More</button>
     </div>
   </div>
-</div>
-<div *ngIf="active_user == 'pet'" class="card">
-  <div class="card-header">
-    <h4>Fluffy</h4>
-  </div>
-  <div class="card-body">
-    <div class="col-md-10">
+  <div *ngIf="active_user == 'me'" class="card">
+    <div class="card-header item">
+      <h4>Matt</h4>
+    </div>
+    <div class="card-body">
       <ul class="list-group list-group-flush">
-        <li *ngFor="let item of fluffy; let i = index" class="list-group-item list-item">{{item}}
-          <a *ngIf="pet_rating[i] == 'neutral'" (click)="change_pet_rating('up', i)" class="fa fa-thumbs-up fa-lg"></a>
-          <a *ngIf="pet_rating[i] == 'up'" style="color:green" (click)="change_pet_rating('down', i)" class="fa fa-thumbs-up fa-lg"></a>
-          <a *ngIf="pet_rating[i] == 'down'" style="color:red" (click)="change_pet_rating('neutral', i)" class="fa fa-thumbs-down fa-lg"></a>
+        <li *ngFor="let item of me; let i = index" class="list-group-item list-item warning-title">
+          {{item}}
+          <a *ngIf="rating[i] == 'neutral'" (click)="change_rating('up', i)" class="fa fa-thumbs-up fa-lg"></a>
+          <a *ngIf="rating[i] == 'up'" style="color:green" (click)="change_rating('down', i)" class="fa fa-thumbs-up fa-lg"></a>
+          <a *ngIf="rating[i] == 'down'" style="color:red" (click)="change_rating('neutral', i)" class="fa fa-thumbs-down fa-lg"></a>
         </li>
       </ul>
       <div class="text-center">
-        <button id="seemore" type="button" class="btn btn-link">See More</button>
+        <button id="seemore" type="button" class="btn btn-link">Find More</button>
       </div>
     </div>
   </div>
-</div>
-<div *ngIf="active_user == 'plants'" class="card">
-    <div class="card-header">
+  <div *ngIf="active_user == 'pet'" class="card">
+    <div class="card-header item">
+      <h4>Fluffy</h4>
+    </div>
+    <div class="card-body">
+      <div class="col-md-10">
+        <ul class="list-group list-group-flush">
+          <li *ngFor="let item of fluffy; let i = index" class="list-group-item list-item warning-title">
+            {{item}}
+            <a *ngIf="pet_rating[i] == 'neutral'" (click)="change_pet_rating('up', i)" class="fa fa-thumbs-up fa-lg"></a>
+            <a *ngIf="pet_rating[i] == 'up'" style="color:green" (click)="change_pet_rating('down', i)" class="fa fa-thumbs-up fa-lg"></a>
+            <a *ngIf="pet_rating[i] == 'down'" style="color:red" (click)="change_pet_rating('neutral', i)" class="fa fa-thumbs-down fa-lg"></a>
+          </li>
+        </ul>
+        <div class="text-center">
+          <button id="seemore" type="button" class="btn btn-link">Find More</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="active_user == 'plants'" class="card">
+    <div class="card-header item">
       <h4>Plants</h4>
     </div>
     <div class="card-body">
       <div class="col-md-10">
         <ul class="list-group list-group-flush">
-          <li *ngFor="let item of fluffy; let i = index" class="list-group-item list-item">{{item}}
+          <li *ngFor="let item of plants; let i = index" class="list-group-item list-item warning-title">
+            {{item}}
             <a *ngIf="plants_rating[i] == 'neutral'" (click)="change_plants_rating('up', i)" class="fa fa-thumbs-up fa-lg"></a>
             <a *ngIf="plants_rating[i] == 'up'" style="color:green" (click)="change_pet_rating('down', i)" class="fa fa-thumbs-up fa-lg"></a>
             <a *ngIf="plants_rating[i] == 'down'" style="color:red" (click)="change_pet_rating('neutral', i)" class="fa fa-thumbs-down fa-lg"></a>
           </li>
         </ul>
         <div class="text-center">
-          <button id="seemore" type="button" class="btn btn-link">See More</button>
+          <button id="seemore" type="button" class="btn btn-link">Find More</button>
         </div>
       </div>
     </div>
   </div>
   <div class="fixed-bottom">
     <button type="button" (click)="feeling_bad()" class="btn btn-primary btn-lg btn-block"><i class="fa fa-thermometer-three-quarters"></i>
-    Feeling bad?
-  </button>
+      Feeling bad?
+    </button>
   </div>
 </div>
