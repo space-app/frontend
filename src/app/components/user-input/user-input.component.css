@@ -16,7 +16,7 @@
   padding-left: 30px;
   padding-right: 30px;
   font-family: 'Montserrat', sans-serif;
-  color: #2F2E4D;
+  color: #2f2d4e;
 }
 
 .header h4 {
@@ -84,6 +84,7 @@ body {
 footer {
   position: absolute;
   bottom: 20px;
+  width: 100% - 60px;
 }
 
 footer .item{
