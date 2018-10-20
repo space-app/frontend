@@ -1,19 +1,21 @@
 <div class="card">
   <div class="card-header">
     <h4>input</h4>
-  <button class="btn btn-primary">Prognosis</button>
+    <button class="btn btn-primary">Prognosis</button>
   </div>
   <div class="card-body">
-<form>
-  <div class="form-group">
-    <label for="exampleSelect1"></label>
-    <select class="form-control" id="">
-      <option>1</option>
-    </select>
-    <ul class="list-group list-group-flush">
-        <li *ngFor="item of selected_diagnosis" class="list-group-item">{{item}}<i class="fas fa-times"></i></li>
-      </ul>
+    <form>
+      <div class="form-group">
+        <label for="exampleSelect1"></label>
+        <select class="form-control" id="">
+          <option>1</option>
+        </select>
+        <ul class="list-group list-group-flush">
+          <li *ngFor="let item of selected_symptoms" class="list-group-item">{{item}}<i class="fa fa-times"></i></li>
+        </ul>
+      </div>
+    </form>
   </div>
-</form>
-</div>
+  <div class="card-footer">
+      <button class="btn btn-primary">Advice me</button>
 </div>

@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./user-input.component.css']
 })
 export class UserInputComponent implements OnInit {
-  selected_symptoms = [];
+  selected_symptoms = ["test", "test2"];
   symptoms;
   diagnosis = {};
   constructor(
@@ -36,5 +36,8 @@ export class UserInputComponent implements OnInit {
     this.httpService.send_symptoms(this.selected_symptoms).subscribe((res)=>{
       this.diagnosis = res;
     })
+  }
+  toAdvice(){
+    this.router.navigate(['advices']);
   }
 }
