@@ -1,8 +1,43 @@
+<nav class="navbar">
+  <span class="navbar-brand mb-0 h1">Pathogee</span>
+</nav>
+  <div class="card">
+      <div class="card-header">
+          <h4>Me</h4> 
+       </div>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+          <li *ngFor="let item of me; let i = index" class="list-group-item list-item">{{item}}
+            <a *ngIf="rating[i] == 'neutral'" (click)="change_rating('up', i)" class="fa fa-thumbs-up"></a>
+            <a *ngIf="rating[i] == 'up'" style="color:green" (click)="change_rating('down', i)" class="fa fa-thumbs-up"></a>
+            <a *ngIf="rating[i] == 'down'" style="color:red" (click)="change_rating('neutral', i)" class="fa fa-thumbs-down"></a>
+          </li>
+        </ul>
+        <div class="text-center">
+            <button id="seemore" type="button" class="btn btn-link">See More</button>
+        </div>
+      </div>
+  </div>
 <div class="card">
   <div class="card-header">
-<h4>bla</h4>
+     <h4>Fluffy</h4> 
   </div>
   <div class="card-body">
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi atque ea tempora dolore commodi voluptate corrupti enim voluptatibus magni nisi cumque id ipsa, dolorem sunt possimus maiores labore dolorum aut.</p>
+    <div class="col-md-10">
+      <ul class="list-group list-group-flush">
+        <li *ngFor="let item of fluffy; let i = index" class="list-group-item list-item">{{item}}
+          <a *ngIf="rating[i] == 'neutral'" (click)="change_pet_rating('up', i)" class="fa fa-thumbs-up"></a>
+          <a *ngIf="rating[i] == 'up'" style="color:green" (click)="change_pet_rating('down', i)" class="fa fa-thumbs-up"></a>
+          <a *ngIf="rating[i] == 'down'" style="color:red" (click)="change_pet_rating('neutral', i)" class="fa fa-thumbs-down"></a>
+        </li>
+      </ul>
+      <div class="text-center">
+          <button id="seemore" type="button" class="btn btn-link">See More</button>
+      </div>
+        </div>
   </div>
 </div>
+<div class="fixed-bottom">
+    <button type="button" class="btn btn-primary btn-lg btn-block"><i class="fa fa-thermometer-three-quarters"></i>   Feeling bad?</button>
+</div>
+
