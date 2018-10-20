@@ -37,7 +37,7 @@ export class UserInputComponent implements OnInit {
       this.diagnosis = res;
     })
   }
-  toAdvice(){
+  to_advices_page(){
     this.router.navigate(['advices']);
   }
 }
