@@ -1,21 +1,87 @@
-<div class="card">
-  <div class="card-header">
-    <h4>input</h4>
-    <button class="btn btn-primary">Prognosis</button>
+<div class="body">
+  <div class="header">
+    <h4>New issue</h4>
+    <span>Start by selecting a precise condition that you feel you are experiencing now.</span>
   </div>
-  <div class="card-body">
-    <form>
-      <div class="form-group">
-        <label for="exampleSelect1"></label>
-        <select class="form-control" id="">
-          <option>1</option>
-        </select>
-        <ul class="list-group list-group-flush">
-          <li *ngFor="let item of selected_symptoms" class="list-group-item">{{item}}<i class="fa fa-times"></i></li>
-        </ul>
+  <div class="card">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-10 title">
+          Flu
+        </div>
+        <div class="round">
+          <input type="checkbox" id="checkbox" />
+          <label for="checkbox"></label>
+        </div>
       </div>
-    </form>
+    </div>
   </div>
-  <div class="card-footer">
-      <button class="btn btn-primary">Advice me</button>
+  <div class="card">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-10 title">
+          Cold
+        </div>
+        <div class="round">
+          <input type="checkbox" id="checkbox1" />
+          <label for="checkbox1"></label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-body">
+
+      <div class="row">
+        <div class="col-10 title">
+          High temperature
+        </div>
+        <div class="round">
+          <input type="checkbox" id="checkbox2" />
+          <label for="checkbox2"></label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-body">
+
+      <div class="row">
+        <div class="col-10 title">
+          Diarrhea
+        </div>
+        <div class="round">
+          <input type="checkbox" id="checkbox3" />
+          <label for="checkbox3"></label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-body">
+
+      <div class="row">
+        <div class="col-10 title">
+          Fatigue
+        </div>
+        <div class="round">
+          <input type="checkbox" id="checkbox4" />
+          <label for="checkbox4"></label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer style="width: 80%">
+    <div class="row">
+      <div class="col-6 item">
+        <button type="button" class="btn cancel" name="button">Cancel</button>
+      </div>
+      <div class="col-6 item">
+        <button type="button" class="btn provide" name="button">Provide</button>
+      </div>
+    </div>
+  </footer>
+
+
 </div>
