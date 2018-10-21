@@ -73,7 +73,7 @@
     <div class="card-body">
       <div class="col-md-10">
         <ul class="list-group list-group-flush">
-          <li *ngFor="let item of fluffy; let i = index" class="list-group-item list-item">{{item}}
+          <li *ngFor="let item of plants; let i = index" class="list-group-item list-item">{{item}}
             <a *ngIf="plants_rating[i] == 'neutral'" (click)="change_plants_rating('up', i)" class="fa fa-thumbs-up fa-lg"></a>
             <a *ngIf="plants_rating[i] == 'up'" style="color:green" (click)="change_pet_rating('down', i)" class="fa fa-thumbs-up fa-lg"></a>
             <a *ngIf="plants_rating[i] == 'down'" style="color:red" (click)="change_pet_rating('neutral', i)" class="fa fa-thumbs-down fa-lg"></a>
